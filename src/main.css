@@ -1,0 +1,606 @@
+@font-face
+{
+	font-family: funFont;
+	src: url(funny.otf);
+}
+#test {
+	position: absolute;
+	display: none;
+	color: #FFF;
+}
+
+#stage {
+	display: block;
+	background-color: #000;
+	position:relative;
+	width: 950px;
+	height: 900px;
+	border: 1px solid #000;
+	margin: 0px auto;
+}
+
+#background {
+	display: block;
+	float: left;
+	width: 950px;
+	height: 900px;
+	background-image: url("../images/main_menu_bg.jpg");
+	-webkit-user-select: none;
+}
+
+#timer {
+	font-family: "Times New Roman", serif;
+	display: none;
+	position: absolute;
+	color: #FFF;
+	bottom: -40px;
+	left: 0px;
+	font-size: 40px;
+	font-weight: bold;
+	background-color: #000;
+	text-align: center;
+	width: 950px;
+	height: auto;
+	z-index: 0;
+}
+
+#score {
+	font-family: funFont, serif;
+	display: none;
+	position: absolute;
+	color: #FFF;
+	bottom: -40px;
+	left: 0px;
+	font-size: 40px;
+	font-weight: bold;
+	z-index: 1;
+}
+.box {
+	display: none;
+	position: absolute;
+	/*These dimensions define the size of the padding and the image itself, careful! */
+	background: none;
+	border: none;
+	outline: none;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+	background-repeat: no-repeat;
+}
+
+.enemy {
+	display: none;
+	background-size: contain;
+	position: absolute;
+	width: 80px;
+	height: 95px;
+	background-repeat: no-repeat;
+}
+
+#quit {
+	font-family: funFont, serif;
+	display: none;
+	position: absolute;
+	bottom: 8px;
+	right: 0px;
+	z-index: 3;
+	background-color: #000;
+	color: #FFF;
+	font-size: 20px;
+	font-weight: bold;
+	height: 30px;
+}
+
+/*the elements until the next comment are for the main menu */
+#title {
+	font-family: funFont, serif;
+	display: block;
+	position: absolute;
+	top: 200px;
+	right: 350px;
+	color: #FFF;
+	text-decoration: underline;
+}
+
+#begin {
+	font-family: funFont, serif;
+	top: 300px;
+}
+
+#howTo {
+	font-family: funFont, serif;
+	top: 350px;
+}
+
+#credits {
+	font-family: funFont, serif;
+	top: 400px;
+}
+
+#back {
+	font-family: funFont, serif;
+	display: none;
+	width: 55px;
+	height: 28px;
+	top: 870px;
+	left: 895px;
+	font-size: 16px;
+}
+
+#cred {
+	font-family: funFont, serif;
+	display: none;
+	color: #FFF;
+	text-decoration: underline;
+	font-size: 28px;
+	position: absolute;
+	left: 5px;
+}
+#thanks {
+	font-family: funFont, serif;
+	display: none;
+	color: #FFF;
+	font-size: 18px;
+	line-height: 110%;
+	position: absolute;
+	top: 40px;
+}
+/*The main menu ends here*/
+
+/*here begins the how to screen, back is also for the credits*/
+
+#howToTitle {
+	font-family: funFont, serif;
+	display: none;
+	color: #FFF;
+	text-decoration: underline;
+	position: absolute;
+	left: 5px;
+}
+
+#instructions {
+	font-family: funFont, serif;
+	display: none;
+	color: #FFF;
+	font-size: 18px;
+	position: absolute;
+	top: 45px;
+	left: 10px;
+	line-height: 110%;
+}
+
+#begin:hover, #howTo:hover, #credits:hover {
+	box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.7);
+}
+
+#begin:active, #howTo:active, #credits:active, #back:active{
+	outline: none;
+}
+
+.button {
+	display: block;
+	position: absolute;
+	background-color: #000;
+	color: #FFF;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	width: 200px;
+	height: 25px;
+	left: 380px;
+	font-size: 18px;
+	
+}
+/*main game tile positioning */
+#row1-1 {
+	background-image: url('../images/box.png');
+	top: 117px;
+	left: 50px;
+	z-index: 2;
+}
+
+#row1-1e {
+	top: 123px;
+	left: 60px;
+	z-index: 1;
+}
+
+#row1-2 {
+	background-image: url('../images/box.png');
+	top: 117px;
+	left: 200px;
+	z-index: 2;
+}
+
+#row1-2e {
+	top: 123px;
+	left: 210px;
+	z-index: 1;
+}
+
+#row1-3 {
+	background-image: url('../images/box.png');
+	top: 117px;
+	left: 350px;
+	z-index: 2;
+}
+#row1-3e {
+	top: 123px;
+	left: 360px;
+	z-index:1;
+}
+
+#row1-4 {
+	background-image: url('../images/box.png');
+	top: 117px;
+	left: 500px;
+	z-index: 2;
+}
+
+#row1-4e {
+	top: 123px;
+	left: 510px;
+	z-index: 1;
+}
+
+#row1-5 {
+	background-image: url('../images/box.png');
+	top: 117px;
+	left: 650px;
+	z-index: 2;
+}
+
+#row1-5e {
+	top: 123px;
+	left: 660px;
+	z-index: 1;
+}
+
+#row1-6 {
+	background-image: url('../images/box.png');
+	top: 117px;
+	left: 800px;
+	z-index: 2;
+}
+
+#row1-6e {
+	top: 123px;
+	left: 810px;
+	z-index: 1;
+}
+
+#row2-1 {
+	background-image: url('../images/box.png');
+	top: 283px;
+	left: 50px;
+	z-index: 2;
+}
+
+#row2-1e {
+	top: 289px;
+	left: 60px;
+	z-index: 1;
+}
+
+#row2-2 {
+	background-image: url('../images/box.png');
+	top: 283px;
+	left: 200px;
+	z-index: 2;
+}
+
+#row2-2e {
+	top: 289px;
+	left: 210px;
+	z-index: 1;
+}
+
+#row2-3 {
+	background-image: url('../images/box.png');
+	top: 283px;
+	left: 350px;
+	z-index: 2;
+}
+
+#row2-3e {
+	top: 289px;
+	left: 360px;
+	z-index: 1;
+}
+
+#row2-4 {
+	background-image: url('../images/box.png');
+	top: 283px;
+	left: 500px;
+	z-index: 2;
+}
+
+#row2-4e {
+	top: 289px;
+	left: 510px;
+	z-index: 1;
+}
+
+#row2-5 {
+	background-image: url('../images/box.png');
+	top: 283px;
+	left: 650px;
+	z-index: 2;
+}
+
+#row2-5e {
+	top: 289px;
+	left: 660px;
+	z-index: 1;
+}
+
+#row2-6 {
+	background-image: url('../images/box.png');
+	top: 283px;
+	left: 800px;
+	z-index: 2;
+}
+
+#row2-6e {
+	top: 289px;
+	left: 810px;
+	z-index: 1;
+}
+
+#row3-1 {
+	background-image: url('../images/box.png');
+	top: 476px;
+	left: 50px;
+	z-index: 2;
+}
+
+#row3-1e {
+	top: 482px;
+	left: 60px;
+	z-index: 1;
+}
+
+#row3-2 {
+	background-image: url('../images/box.png');
+	top: 476px;
+	left: 200px;
+	z-index: 2;
+}
+
+#row3-2e {
+	top: 482px;
+	left: 210px;
+	z-index: 1;
+}
+
+#row3-3 {
+	background-image: url('../images/box.png');
+	top: 476px;
+	left: 350px;
+	z-index: 2;
+}
+
+#row3-3e {
+	top: 482px;
+	left: 360px;
+	z-index: 1;
+}
+
+#row3-4 {
+	background-image: url('../images/box.png');
+	top: 476px;
+	left: 500px;
+	z-index: 2;
+}
+
+#row3-4e {
+	top: 482px;
+	left: 510px;
+	z-index: 1;
+}
+
+#row3-5 {
+	background-image: url('../images/box.png');
+	top: 476px;
+	left: 650px;
+	z-index: 2;
+}
+
+#row3-5e {
+	top: 482px;
+	left: 660px;
+	z-index: 1;
+}
+
+#row3-6 {
+	background-image: url('../images/box.png');
+	top: 476px;
+	left: 800px;
+	z-index: 2;
+}
+
+#row3-6e {
+	top: 482px;
+	left: 810px;
+	z-index: 1;
+}
+
+#row4-1 {
+	background-image: url('../images/box.png');
+	top: 647px;
+	left: 50px;
+	z-index: 2;
+}
+
+#row4-1e {
+	top: 653px;
+	left: 60px;
+	z-index: 1;
+}
+
+#row4-2 {
+	background-image: url('../images/box.png');
+	top: 647px;
+	left: 200px;
+	z-index: 2;
+}
+
+#row4-2e {
+	top: 653px;
+	left: 210px;
+	z-index: 1;
+}
+
+#row4-3 {
+	background-image: url('../images/box.png');
+	top: 647px;
+	left: 350px;
+	z-index: 2;
+}
+
+#row4-3e {
+	top: 653px;
+	left: 360px;
+	z-index: 1;
+}
+
+#row4-4 {
+	background-image: url('../images/box.png');
+	top: 647px;
+	left: 500px;
+	z-index: 2;
+}
+
+#row4-4e {
+	top: 653px;
+	left: 510px;
+	z-index: 1;
+}
+
+#row4-5 {
+	background-image: url('../images/box.png');
+	top: 647px;
+	left: 650px;
+	z-index: 2;
+}
+
+#row4-5e {
+	top: 653px;
+	left: 660px;
+	z-index: 1;
+}
+
+#row4-6 {
+	background-image: url('../images/box.png');
+	top: 647px;
+	left: 800px;
+	z-index: 2;
+}
+
+#row4-6e {
+	top: 653px;
+	left: 810px;
+	z-index: 1;
+}
+
+#ex1 {
+	position: absolute;
+	display: none;
+	top: 350px;
+	right: 20px;
+	width: 100px;
+	height: 100px;
+	border: none;
+	outline: none;
+	background: none;
+	background-image: url('../images/box.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#ex2 {
+	position: absolute;
+	display:none;
+	top: 350px;
+	right: 170px;
+	width: 100px;
+	height: 100px;
+	border: none;
+	outline: none;
+	background: none;
+	background-image: url('../images/box.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#press {
+	font-family: funFont, serif;
+	font-size: 25px;
+	color: #FFF;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-decoration: underline;
+	position: absolute;
+	display: none;
+	top: 450px;
+	right: 40px;
+}
+
+.contain {
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: 100px;
+	width: 700px;
+	height: 300px;
+	overflow: hidden;
+}
+
+#endGame1 {
+	display: none;
+	position: absolute;
+	top: 325px;
+	width: 950px;
+	height: 200px;
+	background-color: #000;
+	border: 1px solid black;
+	z-index: 3;
+}
+
+#win {
+	font-family: funFont, serif;
+	font-size: 28px;
+	color: #FFF;
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 340px;
+	
+	
+}
+
+#lose {
+	display: none;
+	font-family: funFont, serif;
+	font-size: 28px;
+	color: #FFF;
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 360px;
+}
+
+#restart {
+	font-family: funFont, serif;
+	display: none;
+	position: absolute;
+	width: 100px;
+	height: 60px;
+	top: 120px;
+	left: 420px;
+	font-size: 24px;
+	cursor: pointer;
+	outline: none;
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="en">
+		<link rel="icon" type="image/png" href="../images/box.png">
+		<link rel="stylesheet" href="main.css">
+		<title>Match Madness!</title>
+	</head>
+	<body>
+		<div id="stage" readonly>
+		<div id="background">
+		<!-- all of the elements until the next comment are for the gameplay screen-->
+		<div id="endGame1">
+		<p id="win">You Win!!!! Congrats!</p>
+		<p id="lose">Sorry, try again!</p>
+		<button class="button" id="restart">Play Again</button>
+		</div>
+		<p id="score">Score: 0</p>
+		<p id="timer"></p>
+		<audio id="clickBox" preload="auto">
+		<source src="../audio/Pickup_Coin.wav">
+		</audio>
+		<button class="box" id="row1-1" onclick="boxClicked('row1-1', 0)"></button>
+		<button class="box" id="row1-2" onclick="boxClicked('row1-2', 1)"></button>
+		<button class="box" id="row1-3" onclick="boxClicked('row1-3', 2)"></button>
+		<button class="box" id="row1-4" onclick="boxClicked('row1-4', 3)"></button>
+		<button class="box" id="row1-5" onclick="boxClicked('row1-5', 4)"></button>
+		<button class="box" id="row1-6" onclick="boxClicked('row1-6', 5)"></button>
+		<button class="box" id="row2-1" onclick="boxClicked('row2-1', 6)"></button>
+		<button class="box" id="row2-2" onclick="boxClicked('row2-2', 7)"></button>
+		<button class="box" id="row2-3" onclick="boxClicked('row2-3', 8)"></button>
+		<button class="box" id="row2-4" onclick="boxClicked('row2-4', 9)"></button>
+		<button class="box" id="row2-5" onclick="boxClicked('row2-5', 10)"></button>
+		<button class="box" id="row2-6" onclick="boxClicked('row2-6', 11)"></button>
+		<button class="box" id="row3-1" onclick="boxClicked('row3-1', 12)"></button>
+		<button class="box" id="row3-2" onclick="boxClicked('row3-2', 13)"></button>
+		<button class="box" id="row3-3" onclick="boxClicked('row3-3', 14)"></button>
+		<button class="box" id="row3-4" onclick="boxClicked('row3-4', 15)"></button>
+		<button class="box" id="row3-5" onclick="boxClicked('row3-5', 16)"></button>
+		<button class="box" id="row3-6" onclick="boxClicked('row3-6', 17)"></button>
+		<button class="box" id="row4-1" onclick="boxClicked('row4-1', 18)"></button>
+		<button class="box" id="row4-2" onclick="boxClicked('row4-2', 19)"></button>
+		<button class="box" id="row4-3" onclick="boxClicked('row4-3', 20)"></button>
+		<button class="box" id="row4-4" onclick="boxClicked('row4-4', 21)"></button>
+		<button class="box" id="row4-5" onclick="boxClicked('row4-5', 22)"></button>
+		<button class="box" id="row4-6" onclick="boxClicked('row4-6', 23)"></button>
+		
+		<button id="ex1" onclick="change(ex1)"></button>
+		<button id="ex2" onclick="change1(ex2)"></button> 
+		<p id="press">Click the boxes!</p>
+		
+		<div class="enemy" id="row1-1e"></div> <!--numbers 0 1 2 3 etc. are reserved and cannot be used as ids -->
+		<div class="enemy" id="row1-2e"></div>
+		<div class="enemy" id="row1-3e"></div>
+		<div class="enemy" id="row1-4e"></div>
+		<div class="enemy" id="row1-5e"></div>
+		<div class="enemy" id="row1-6e"></div>
+		<div class="enemy" id="row2-1e"></div>
+		<div class="enemy" id="row2-2e"></div>
+		<div class="enemy" id="row2-3e"></div>
+		<div class="enemy" id="row2-4e"></div>
+		<div class="enemy" id="row2-5e"></div>
+		<div class="enemy" id="row2-6e"></div>
+		<div class="enemy" id="row3-1e"></div>
+		<div class="enemy" id="row3-2e"></div>
+		<div class="enemy" id="row3-3e"></div>
+		<div class="enemy" id="row3-4e"></div>
+		<div class="enemy" id="row3-5e"></div>
+		<div class="enemy" id="row3-6e"></div>
+		<div class="enemy" id="row4-1e"></div>
+		<div class="enemy" id="row4-2e"></div>
+		<div class="enemy" id="row4-3e"></div>
+		<div class="enemy" id="row4-4e"></div>
+		<div class="enemy" id="row4-5e"></div>
+		<div class="enemy" id="row4-6e"></div>
+		
+		<audio id="mainMusic" preload="auto" loop>
+		<source src="../audio/above-the-clouds.mp3">
+		</audio>
+		
+		<button id="quit">Back to Menu</button>
+		<!-- all the elements until the next comment are for the main menu-->
+		<h1 id="title">Match Madness!</h1>
+		<p id="test">Hello!</p>
+		<!--For when the button is pressed -->
+		<audio id="buttonHover" preload="auto">
+		<source src="../audio/water_drip.wav">
+		</audio>
+		<button class="button" id="begin">Start Game</button>
+		
+		<button class="button" id="howTo">How To Play</button>
+		<button class="button" id="credits">Credits</button>
+		<!--The next set is for the how to menu, back is for credits too-->
+		<button class="button" id="back">Back</button>
+		<div class="contain" id ="contain1">
+		<h1 id="howToTitle">How To Play:</h1>
+		<p id="instructions">Hello and thank you for playing Match Madness!
+		<br>The object of the game is to match up the characters behind the boxes
+		<br>These characters are revealed when the player clicks on the boxes one at a time.
+		<br>If the match is correct, then the pair will stay on screen and you may continue to find new matches, but if its wrong the boxes re-appear and you need to try again.
+		<br>Try to finish the game as fast as you can, and compete against your friends and family to see who is the best!</p>
+		</div>
+		<!-- This is the credits content-->
+		<h1 id="cred">A Very Special Thanks To:</h1>
+		<div class="contain" id="contain2">
+		<ul id="thanks">
+			<li>www.freesfx.co.uk for the water drop sfx in the start menu</li>
+			<li>BBandRage from opengameart.org for "Above the Clouds" (main bg music)</li>
+			<li>8-bit Platformer SFX commissioned by Mark McCorkle for OpenGameArt.org ( http://opengameart.org ) (the box sfx)</li>
+			<li>www.sethbyrd.com for the boxes and characters behind them.</li>
+			<li>All game backgrounds are courtesy of @CamTatz.</li>
+			<li>Font courtesy of www.urbanfonts.com (aBeatBy Kai)</li>
+		</ul>
+		</div>
+		</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>

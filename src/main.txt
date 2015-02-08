@@ -1,0 +1,40 @@
+Incompatibilites:
+
+This game was programmed with Chrome web browser in mind
+that being said, this log shows inconsistancies among
+other web browsers, i will fix what I can.
+
+IE:
+The audio does not work,
+the positioning of the back button is slightly off.
+
+Firefox:
+-back button is a bit off...
+
+Opera and Chrome:
+Absolutely no issues.
+
+Safari:
+The audio does not work and the back button is ever
+so slightly too far to the right.
+Also, the "Back to Menu" button doesn't work in this
+browser only.
+
+Current Objectives:
+
+ 
+-2When matches are made, for them to remain face up, otherwise to return face down.
+- 1Add a win condition and message as well as a lose condition and message for the end game, also refer to the back button to restart
+the game in the message to clarify that you can do that as the player.
+-the timer needs to reset (and not speed up) when the player goes back and starts a new game.
+- FINISH STYLING IT UP WITH SOME LAST MINUTE CSS!! :D
+THIS IS FOR EXTRA SUPPORT SO EVERYONE CAN DISPLAY THE TEXT PROPERLY. THIS ALSO GOES FOR INSERTING ADDITIONAL
+AUDIO FORMATS AND WHATNOT (GRAPHIC FORMATS FOR SAFARI AS WELL!)'
+
+-make the credits and the how to screen text neat and tidy.
+-change the main menu background to make it cooler and more retro!
+- fix the javascript!!
+-put an example in the hot to play in the space there.
+-use the graphics from the main menu and use those in the game itself so it looks consistant, then update the credits to be
+accurate!
+Rdelgado@georgebrown.ca
