@@ -149,8 +149,8 @@ for(var i = 0; i < box.length; i++)
 {
 	box[i].style.cursor = "pointer";
 }
-var something = 0;
-var position = [];
+
+
 var newArray = [];
 var container = [];
 var count = 0;
